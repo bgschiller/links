@@ -6,8 +6,12 @@ const App = React.createClass({
   render(){
     return (
       <div>
-        <h1>Brian's Favorites</h1>
-        {this.props.favorites.map((f)=> <Favorite {...f} />)}
+        <h1>Favorite Links</h1>
+        <div className="container">
+          <ul className="items">
+            {this.props.favorites.map((f)=> <Favorite {...f} />)}
+          </ul>
+        </div>
       </div>
     );
   }
